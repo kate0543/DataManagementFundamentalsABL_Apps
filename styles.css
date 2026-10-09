@@ -1,0 +1,20 @@
+body{font-family:system-ui,sans-serif;margin:0;color:#222;background:#f5f7fa}
+header{background:#1d3557;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0}header p{margin:.25rem 0 1rem}
+nav button{background:#457b9d;color:#fff;border:0;padding:.5rem .9rem;margin-right:.3rem;border-radius:4px 4px 0 0;cursor:pointer}
+nav button[aria-selected=true]{background:#fff;color:#1d3557;font-weight:bold}
+main{max-width:900px;margin:1rem auto;padding:0 1rem}
+.panel{background:#fff;padding:1rem 1.5rem;border-radius:6px;box-shadow:0 1px 3px #0003}
+.aim{font-style:italic;color:#555}
+button{cursor:pointer;padding:.4rem .9rem;border:0;border-radius:4px;background:#1d3557;color:#fff}
+button.secondary{background:#888}
+table{border-collapse:collapse;margin:.5rem 0}
+td,th{border:1px solid #bbb;padding:.35rem .7rem}
+#quality-table td{cursor:pointer}
+td.sel{outline:3px solid #e9c46a}
+td.ok{background:#b7e4c7}td.bad{background:#f5b7b1}
+.row{display:flex;gap:1rem;align-items:center;margin:.4rem 0;flex-wrap:wrap}
+.row .item{flex:1 1 220px}
+.result{font-weight:bold}
+textarea{display:block;width:100%;box-sizing:border-box;margin:.3rem 0 1rem}
+.good{color:#2d6a4f}.warn{color:#b23a48}
