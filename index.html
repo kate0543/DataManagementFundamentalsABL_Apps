@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Management Fundamentals – Workshop Activities</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Data Management Fundamentals</h1>
+  <p>Level 4 · Activity-Based Learning workshop activities</p>
+  <nav id="tabs" role="tablist">
+    <button role="tab" data-tab="types" aria-selected="true">1. Data types</button>
+    <button role="tab" data-tab="quality" aria-selected="false">2. Data quality</button>
+    <button role="tab" data-tab="keys" aria-selected="false">3. Keys &amp; normalisation</button>
+    <button role="tab" data-tab="reflect" aria-selected="false">4. Reflection</button>
+  </nav>
+</header>
+<main>
+  <section id="types" class="panel">
+    <h2>Activity 1: Classify the data</h2>
+    <p class="aim">Learning aim: distinguish data types and measurement levels. Work in pairs, decide, then check.</p>
+    <div id="types-list"></div>
+    <button id="types-check">Check answers</button>
+    <p id="types-result" class="result" aria-live="polite"></p>
+  </section>
+
+  <section id="quality" class="panel" hidden>
+    <h2>Activity 2: Find the data quality issues</h2>
+    <p class="aim">Learning aim: apply data quality dimensions. Click each cell you think is a problem, label the dimension, then check.</p>
+    <table id="quality-table"></table>
+    <p>Dimension for selected cell:
+      <select id="quality-dim">
+        <option value="">-- choose --</option>
+        <option>Completeness</option><option>Validity</option><option>Uniqueness</option>
+        <option>Consistency</option><option>Accuracy</option>
+      </select>
+    </p>
+    <button id="quality-check">Check answers</button>
+    <p id="quality-result" class="result" aria-live="polite"></p>
+  </section>
+
+  <section id="keys" class="panel" hidden>
+    <h2>Activity 3: Keys and normalisation</h2>
+    <p class="aim">Learning aim: identify keys and redundancy. Discuss with your group before answering.</p>
+    <table id="keys-table"></table>
+    <div id="keys-list"></div>
+    <button id="keys-check">Check answers</button>
+    <p id="keys-result" class="result" aria-live="polite"></p>
+  </section>
+
+  <section id="reflect" class="panel" hidden>
+    <h2>Activity 4: Reflect (ABL cycle)</h2>
+    <p class="aim">Responses are saved only in this browser.</p>
+    <label>What did we do?<textarea data-key="did" rows="3"></textarea></label>
+    <label>What did I learn about managing data?<textarea data-key="learn" rows="3"></textarea></label>
+    <label>How could I apply this in my project or workplace?<textarea data-key="apply" rows="3"></textarea></label>
+    <label>Confidence (1–5): <input type="range" min="1" max="5" value="3" data-key="conf"></label>
+    <button id="reflect-export">Download my reflection</button>
+    <button id="reflect-clear" class="secondary">Clear</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
