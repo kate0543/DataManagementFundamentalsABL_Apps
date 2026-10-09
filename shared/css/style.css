@@ -58,6 +58,30 @@ body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
 .role-guide-grid b,.role-guide-grid span { display:block; }
 .role-guide-grid b { font-size:.8rem; }
 .role-guide-grid span { margin-top:.25rem; color:#475569; font-size:.75rem; line-height:1.35; }
+.dictionary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:1rem; }
+.dictionary-card { min-height:250px; cursor:pointer; outline:none; perspective:1000px; }
+.dictionary-card:focus-visible { border-radius:1rem; box-shadow:0 0 0 4px #f0abfc; }
+.dictionary-card-inner { position:relative; height:100%; min-height:250px; transform-style:preserve-3d; transition:transform .55s ease; }
+.dictionary-card.is-flipped .dictionary-card-inner { transform:rotateY(180deg); }
+.dictionary-face { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; backface-visibility:hidden; border:3px solid #e9d5ff; border-radius:1rem; background:linear-gradient(145deg,#fff,#fdf4ff); padding:1rem; color:#4a044e; text-align:center; box-shadow:0 5px 0 #e9d5ff; }
+.dictionary-front h2,.dictionary-back h2 { margin:.65rem 0; font-size:1.05rem; font-weight:1000; }
+.dictionary-face small { color:#a21caf; font-size:.65rem; font-weight:1000; letter-spacing:.1em; text-transform:uppercase; }
+.dictionary-hint { margin-top:auto; color:#a21caf; font-size:.7rem; font-weight:900; }
+.dictionary-back { transform:rotateY(180deg); align-items:stretch; text-align:left; }
+.dictionary-back>span,.dictionary-back>small,.dictionary-back h2 { text-align:center; }
+.dictionary-back p { flex:1; font-size:.78rem; line-height:1.4; }
+.dictionary-actions { display:flex; gap:.4rem; }
+.dictionary-rate { flex:1; border-radius:.6rem; padding:.5rem .35rem; font-size:.68rem; font-weight:1000; }
+.dictionary-rate.know { background:#dcfce7; color:#166534; }
+.dictionary-rate.review { background:#fef3c7; color:#92400e; }
+.dictionary-card.card-known .dictionary-front { border-color:#86efac; box-shadow:0 5px 0 #86efac; }
+.dictionary-card.card-review .dictionary-front { border-color:#fcd34d; box-shadow:0 5px 0 #fcd34d; }
+.dictionary-star { position:absolute; top:.6rem; right:.7rem; min-height:1.5rem; font-size:1.2rem; }
+.review-popup { position:fixed; inset:0; z-index:50; display:grid; place-items:center; background:rgba(15,23,42,.65); padding:1rem; }
+.review-dialog { position:relative; width:min(100%,28rem); border:3px solid #f0abfc; border-radius:1.25rem; background:#fff; padding:1.5rem; color:#4a044e; box-shadow:0 12px 0 rgba(74,4,78,.25); }
+.review-close:first-child { position:absolute; top:.65rem; right:.8rem; border:0; background:transparent; color:#86198f; font-size:1.8rem; line-height:1; }
+.review-dialog .review-close:last-child { border:0; }
+.dark .review-dialog { background:#1e293b; color:#fdf4ff; }
 .seated-board .player-seat b { font-size:.85rem; }
 .seated-board .player-seat span,.seated-board .expert-seat span,.seated-board .boss-seat span,.seated-board .engineer-seat span { display:block; }
 .seated-board .expert-seat { min-width:7rem; }
