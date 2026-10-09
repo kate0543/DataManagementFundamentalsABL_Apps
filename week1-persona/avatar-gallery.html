@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Persona Avatar Gallery | Data Quest</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../shared/css/style.css?v=20261009-12">
+  <link rel="stylesheet" href="../shared/css/style.css?v=20261009-13">
 </head>
 <body class="gather-page min-h-screen text-slate-800 dark:text-slate-100">
   <main class="mx-auto max-w-6xl px-5 py-8">
@@ -19,12 +19,12 @@
   </main>
   <script>
     const personas = [
-      ["The Data Scientist", "🧪", "violet"], ["The Data Analyst", "📊", "blue"],
-      ["The Data Consultant", "🗣️", "sky"], ["The Data Engineer", "⚙️", "orange"],
-      ["The Cloud Engineer", "☁️", "cyan"], ["The Database Administrator", "🗄️", "indigo"],
-      ["The Data Support Specialist", "🧯", "emerald"], ["The Cybersecurity Analyst", "🔐", "slate"],
-      ["The Security Guardian", "🛡️", "rose"], ["The Data Quality Analyst", "✅", "green"],
-      ["The Data Architect", "🏗️", "amber"], ["The Product Manager", "🚀", "fuchsia"],
+      ["The Data Scientist", "🧙‍♀️", "violet"], ["The Data Analyst", "🔮", "blue"],
+      ["The Data Consultant", "🧝‍♂️", "sky"], ["The Data Engineer", "🧑‍🔬", "orange"],
+      ["The Cloud Engineer", "🧚‍♀️", "cyan"], ["The Database Administrator", "🧙‍♂️", "indigo"],
+      ["The Data Support Specialist", "🧝‍♀️", "emerald"], ["The Cybersecurity Analyst", "🥷", "slate"],
+      ["The Security Guardian", "🛡️", "rose"], ["The Data Quality Analyst", "🕵️‍♀️", "green"],
+      ["The Data Architect", "👑", "amber"], ["The Product Manager", "🧚‍♂️", "fuchsia"],
     ];
     const presets = [
       ["#f6c7a5", "short", "classic"], ["#d99b72", "long", "soft"], ["#8d5524", "curly", "bold"],
@@ -41,19 +41,10 @@
       amber: ["#d97706", "#fef3c7", "#c9825b", "#78350f"], fuchsia: ["#c026d3", "#fae8ff", "#f6c7a5", "#4a044e"],
     };
     function avatar([name, emoji, colour], index) {
-      const [accent, background, defaultSkin, defaultHair] = styles[colour];
-      const [skin, hairChoice, presentation] = presets[index];
-      const archetypes = {"The Data Scientist":["🧙","wizard"],"The Data Analyst":["🔭","sorcerer"],"The Data Consultant":["🗺️","captain"],"The Data Engineer":["⚒️","engineer"],"The Cloud Engineer":["☁️","sky mage"],"The Database Administrator":["🗝️","keeper"],"The Data Support Specialist":["⚔️","fighter"],"The Cybersecurity Analyst":["🏴‍☠️","pirate"],"The Security Guardian":["🛡️","knight"],"The Data Quality Analyst":["🔎","detective"],"The Data Architect":["👑","architect"],"The Product Manager":["🚀","commander"]};
+      const [accent, background] = styles[colour];
+      const archetypes = {"The Data Scientist":["🧙‍♀️","wizard"],"The Data Analyst":["🔮","oracle"],"The Data Consultant":["🧝‍♂️","elf guide"],"The Data Engineer":["🧑‍🔬","alchemist"],"The Cloud Engineer":["🧚‍♀️","sky fairy"],"The Database Administrator":["🧙‍♂️","rune keeper"],"The Data Support Specialist":["🧝‍♀️","healer"],"The Cybersecurity Analyst":["🥷","shadow ninja"],"The Security Guardian":["🛡️","knight"],"The Data Quality Analyst":["🕵️‍♀️","detective"],"The Data Architect":["👑","royal architect"],"The Product Manager":["🧚‍♂️","quest guide"]};
       const [icon, archetype] = archetypes[name];
-      const outfit = presentation === "bold" ? "#172033" : presentation === "soft" ? "#f472b6" : accent;
-      const hairShape = hairChoice === "long"
-        ? "M48 82c-9-42 13-65 40-65s49 23 40 65c-9-7-16-16-17-30-18 9-39 9-57 0-1 14-8 23-6 30Z"
-        : hairChoice === "curly"
-          ? "M48 72c-9-25 9-54 40-54s49 29 40 54c-8-7-12-13-16-22-17 11-32 11-49 0-4 9-8 15-15 22Z"
-          : "M51 70c2-35 68-52 76 4-15-13-29-18-48-13-7 8-16 11-28 9Z";
-      const prop = {"wizard":'<path d="M45 53 88 10l43 43H45Z" fill="#312e81" stroke="#fef08a" stroke-width="4"/>',"sorcerer":'<circle cx="128" cy="40" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>',"captain":'<path d="M48 45h80l-12-18H60Z" fill="#f8fafc" stroke="#0284c7" stroke-width="4"/>',"engineer":'<path d="M119 29l27 27-10 10-27-27Z" fill="#94a3b8" stroke="#ea580c" stroke-width="4"/>',"sky mage":'<path d="M128 22c15 8 15 25 0 33-15-8-15-25-0-33Z" fill="#e0f2fe" stroke="#0891b2" stroke-width="4"/>',"keeper":'<path d="M128 19v44M110 31h36" stroke="#fef3c7" stroke-width="5"/>',"fighter":'<path d="M126 21 143 55 126 71 109 55Z" fill="#f8fafc" stroke="#059669" stroke-width="4"/>',"pirate":'<path d="M48 54c12-24 59-24 75 0" fill="#111827" stroke="#475569" stroke-width="5"/>',"knight":'<path d="M127 19l17 18-17 25-17-25Z" fill="#fda4af" stroke="#e11d48" stroke-width="4"/>',"detective":'<path d="M47 48h82l-10-22H57Z" fill="#14532d" stroke="#16a34a" stroke-width="4"/>',"architect":'<path d="M113 42h30l-15-25Z" fill="#fef3c7" stroke="#d97706" stroke-width="4"/>',"commander":'<path d="M119 23 143 47l-24 24-24-24Z" fill="#fae8ff" stroke="#c026d3" stroke-width="4"/>'}[archetype] || "";
-      const initials = name.replace("The ", "").split(" ").map((word) => word[0]).slice(0, 2).join("");
-      const avatarEmoji = {"wizard":"🧙","sorcerer":"🔭","captain":"🗺️","engineer":"⚒️","sky mage":"☁️","keeper":"🗝️","fighter":"⚔️","pirate":"🏴‍☠️","knight":"🛡️","detective":"🔎","architect":"👑","commander":"🚀"}[archetype] || "✨";
+      const avatarEmoji = {"wizard":"🧙‍♀️","oracle":"🔮","elf guide":"🧝‍♂️","alchemist":"🧑‍🔬","sky fairy":"🧚‍♀️","rune keeper":"🧙‍♂️","healer":"🧝‍♀️","shadow ninja":"🥷","knight":"🛡️","detective":"🕵️‍♀️","royal architect":"👑","quest guide":"🧚‍♂️"}[archetype] || "✨";
       return `<div class="persona-avatar persona-emoji" style="background:${background};border-color:${accent}" role="img" aria-label="${name} ${archetype} emoji avatar"><span class="persona-emoji-icon">${avatarEmoji}</span><span class="persona-emoji-badge">${archetype}</span></div>`;
     }
     document.querySelector("#gallery").innerHTML = personas.map((persona, index) => `<article class="rounded-2xl border border-violet-300/30 bg-white/10 p-5 text-center"><div class="mx-auto w-36">${avatar(persona, index)}</div><h2 class="mt-4 font-black">${persona[0]}</h2><p class="mt-1 text-sm text-violet-200">${persona[1]} · ${persona[2]} style</p></article>`).join("");

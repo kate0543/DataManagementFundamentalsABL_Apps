@@ -110,18 +110,18 @@ const feedback = [
 ];
 
 const personas = [
-  ["The Data Scientist", "🧪", "You spot patterns and ask brilliant questions.", "Try turning a real-world question into a simple chart or prediction.", "violet"],
-  ["The Data Analyst", "📊", "You turn messy numbers into clear findings people can act on.", "Create a small dashboard that answers one useful business question.", "blue"],
-  ["The Data Consultant", "🗣️", "You explain confusing problems and help people choose a useful solution.", "Practise explaining one data idea in plain English.", "sky"],
-  ["The Data Engineer", "⚙️", "You like building reliable systems that make data flow.", "Sketch how messy data could be cleaned and moved into a useful table.", "orange"],
-  ["The Cloud Engineer", "☁️", "You connect services and imagine what technology could automate next.", "Design a cloud or API solution to remove one manual task.", "cyan"],
-  ["The Database Administrator", "🗄️", "You keep databases organised, available and ready for people to use.", "Design a simple backup and access plan for a student database.", "indigo"],
-  ["The Data Support Specialist", "🧯", "You stay calm, solve practical problems and help users get unstuck.", "Write a troubleshooting checklist someone else could follow.", "emerald"],
-  ["The Cybersecurity Analyst", "🔐", "You notice suspicious activity and protect systems from harm.", "Identify three warning signs of an unsafe login or data request.", "slate"],
+  ["The Data Scientist", "🧙‍♀️", "You spot patterns and ask brilliant questions.", "Try turning a real-world question into a simple chart or prediction.", "violet"],
+  ["The Data Analyst", "🔮", "You turn messy numbers into clear findings people can act on.", "Create a small dashboard that answers one useful business question.", "blue"],
+  ["The Data Consultant", "🧝‍♂️", "You explain confusing problems and help people choose a useful solution.", "Practise explaining one data idea in plain English.", "sky"],
+  ["The Data Engineer", "🧑‍🔬", "You like building reliable systems that make data flow.", "Sketch how messy data could be cleaned and moved into a useful table.", "orange"],
+  ["The Cloud Engineer", "🧚‍♀️", "You connect services and imagine what technology could automate next.", "Design a cloud or API solution to remove one manual task.", "cyan"],
+  ["The Database Administrator", "🧙‍♂️", "You keep databases organised, available and ready for people to use.", "Design a simple backup and access plan for a student database.", "indigo"],
+  ["The Data Support Specialist", "🧝‍♀️", "You stay calm, solve practical problems and help users get unstuck.", "Write a troubleshooting checklist someone else could follow.", "emerald"],
+  ["The Cybersecurity Analyst", "🥷", "You notice suspicious activity and protect systems from harm.", "Identify three warning signs of an unsafe login or data request.", "slate"],
   ["The Security Guardian", "🛡️", "You care about privacy, safe access and making responsible choices.", "Create three rules for keeping a dataset safe and trustworthy.", "rose"],
-  ["The Data Quality Analyst", "✅", "You ask the most important question: can we trust this data?", "Audit a messy spreadsheet and propose one validation rule.", "green"],
-  ["The Data Architect", "🏗️", "You design the structures and relationships that help data make sense.", "Sketch a simple data model with clear tables and keys.", "amber"],
-  ["The Product Manager", "🚀", "You connect user needs, business goals and technology into a useful product.", "Write one measurable data feature that would improve a service.", "fuchsia"],
+  ["The Data Quality Analyst", "🕵️‍♀️", "You ask the most important question: can we trust this data?", "Audit a messy spreadsheet and propose one validation rule.", "green"],
+  ["The Data Architect", "👑", "You design the structures and relationships that help data make sense.", "Sketch a simple data model with clear tables and keys.", "amber"],
+  ["The Product Manager", "🧚‍♂️", "You connect user needs, business goals and technology into a useful product.", "Write one measurable data feature that would improve a service.", "fuchsia"],
 ];
 
 const sortingQuestions = [
@@ -160,25 +160,7 @@ const sortingQuestions = [
     ["Seeing people use your recommendation confidently 🤝", [2, 11]],
     ["Watching a reliable solution run smoothly ⚙️", [3, 4, 5, 10]],
     ["Knowing the data is accurate, private and trusted 🔒", [6, 8, 9]],
-  ]],
-  ["The Hat needs your avatar style. Choose a skin tone that feels most like you:", [
-    ["🌤️ Light", [], { skin: "#f6c7a5" }],
-    ["🌞 Warm tan", [], { skin: "#d99b72" }],
-    ["🌅 Deep brown", [], { skin: "#8d5524" }],
-    ["🌈 Let the Hat choose", [], { skin: "random" }],
-  ]],
-  ["Choose a hairstyle for your avatar:", [
-    ["💇 Short and tidy", [], { hair: "short" }],
-    ["💁 Long and flowing", [], { hair: "long" }],
-    ["🦱 Curly and bold", [], { hair: "curly" }],
-    ["✨ Hat magic — surprise me", [], { hair: "random" }],
-  ]],
-  ["How should your avatar express itself?", [
-    ["🧑 A classic look", [], { presentation: "classic" }],
-    ["👩 A soft look", [], { presentation: "soft" }],
-    ["🧑‍🎤 A bold look", [], { presentation: "bold" }],
-    ["🌟 Something uniquely me", [], { presentation: "unique" }],
-  ]],
+  ]],   
 ];
 
 let questionIndex = 0;
@@ -381,7 +363,7 @@ const pillarPraise = {
 
 function createAvatar(persona, preferences = {}) {
   const styles = { violet: ["#7c3aed", "#ede9fe"], blue: ["#2563eb", "#dbeafe"], sky: ["#0284c7", "#e0f2fe"], orange: ["#ea580c", "#ffedd5"], cyan: ["#0891b2", "#cffafe"], indigo: ["#4f46e5", "#e0e7ff"], emerald: ["#059669", "#d1fae5"], slate: ["#475569", "#e2e8f0"], rose: ["#e11d48", "#ffe4e6"], green: ["#16a34a", "#dcfce7"], amber: ["#d97706", "#fef3c7"], fuchsia: ["#c026d3", "#fae8ff"] };
-  const archetypes = { "The Data Scientist": ["🧙", "Wizard"], "The Data Analyst": ["🔭", "Sorcerer"], "The Data Consultant": ["🗺️", "Captain"], "The Data Engineer": ["⚒️", "Engineer"], "The Cloud Engineer": ["☁️", "Sky Mage"], "The Database Administrator": ["🗝️", "Key Keeper"], "The Data Support Specialist": ["⚔️", "Fighter"], "The Cybersecurity Analyst": ["🏴‍☠️", "Pirate"], "The Security Guardian": ["🛡️", "Knight"], "The Data Quality Analyst": ["🔎", "Detective"], "The Data Architect": ["👑", "Architect"], "The Product Manager": ["🚀", "Commander"] };
+  const archetypes = { "The Data Scientist": ["🧙‍♀️", "Wizard"], "The Data Analyst": ["🔮", "Oracle"], "The Data Consultant": ["🧝‍♂️", "Elf Guide"], "The Data Engineer": ["🧑‍🔬", "Alchemist"], "The Cloud Engineer": ["🧚‍♀️", "Sky Fairy"], "The Database Administrator": ["🧙‍♂️", "Rune Keeper"], "The Data Support Specialist": ["🧝‍♀️", "Healer"], "The Cybersecurity Analyst": ["🥷", "Shadow Ninja"], "The Security Guardian": ["🛡️", "Knight"], "The Data Quality Analyst": ["🕵️‍♀️", "Detective"], "The Data Architect": ["👑", "Royal Architect"], "The Product Manager": ["🧚‍♂️", "Quest Guide"] };
   const [accent, background] = styles[persona[4]] || styles.violet;
   const [icon, archetype] = archetypes[persona[0]] || ["✨", "Hero"];
   return `<div class="persona-avatar persona-emoji" style="background:${background};border-color:${accent}" role="img" aria-label="${persona[0]} ${archetype} emoji avatar"><span class="persona-emoji-icon">${icon}</span><span class="persona-emoji-badge">${archetype}</span></div>`;
