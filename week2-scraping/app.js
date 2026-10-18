@@ -58,7 +58,7 @@ const app = document.querySelector("#app");
 
 function render() {
   app.innerHTML = `
-    <section class="card glass p-7">
+    <section class="week2-quest card glass p-7">
       <p class="font-bold uppercase tracking-widest text-sky-600">Mission 02 · Responsible journeys</p>
       <h1 class="mt-2 text-4xl font-black">Bot vs CAPTCHA simulator</h1>
       <p class="mt-3 max-w-3xl">Unlock the classroom evidence locker through five escalating CAPTCHA waves. Select every matching emoji, avoid the decoys and learn how automated systems classify data.</p>
@@ -94,7 +94,7 @@ function render() {
       <hr class="my-8 border-slate-200 dark:border-slate-700">
       <h2 class="text-2xl font-black">Data Journey Quiz CAPTCHA</h2>
       <p class="mt-2">Pass five everyday data journey questions. Choose the correct sequence before the next gate unlocks.</p>
-      <div class="mt-4 rounded-2xl border-2 border-amber-200 bg-amber-50 p-4 dark:border-amber-900 dark:bg-amber-950/20">${renderJourney()}</div>
+      <div class="week2-journey mt-4 rounded-2xl border-2 border-amber-200 bg-amber-50 p-4 dark:border-amber-900 dark:bg-amber-950/20">${renderJourney()}</div>
       <p id="feedback" class="mt-4 min-h-6 font-bold"></p>
     </section>`;
 
@@ -154,19 +154,24 @@ function renderJourney() {
 
 function selectJourneyOption(index) {
   const round = journeyRounds[journeyRound];
+  const selectedButton = document.querySelector(`[data-journey-option="${index}"]`);
   if (index !== round.answer) {
     mistakes += 1;
     gameAudio.wrong();
-    render();
+    selectedButton.classList.add("answer-wrong");
+    selectedButton.style.setProperty("border-color", "#dc2626", "important");
     document.querySelector("#feedback").textContent = `CAPTCHA miss. ${round.explanation}`;
     return;
   }
   score += 1;
-  journeyRound += 1;
   gameAudio.correct();
-  render();
+  selectedButton.classList.add("answer-correct");
+  selectedButton.style.setProperty("border-color", "#16a34a", "important");
   document.querySelector("#feedback").textContent = `Gate cleared! ${round.explanation}`;
-  render();
+  window.setTimeout(() => {
+    journeyRound += 1;
+    render();
+  }, 500);
 }
 
 function renderCaptcha() {
@@ -181,11 +186,14 @@ function renderCaptcha() {
     button.onclick = () => {
       const tile = round.tiles[+button.dataset.tile];
       if (round.targets.includes(tile) && mode !== "bot") {
-        button.classList.add("border-emerald-500", "bg-emerald-100");
+        button.classList.add("answer-correct");
+        button.style.setProperty("border-color", "#16a34a", "important");
         button.disabled = true;
-        const selected = [...document.querySelectorAll(".captcha-tile.border-emerald-500")].map((item) => round.tiles[+item.dataset.tile]);
+        const selected = [...document.querySelectorAll(".captcha-tile.answer-correct")].map((item) => round.tiles[+item.dataset.tile]);
         if (round.targets.every((target) => selected.includes(target))) answerCaptcha();
       } else {
+        button.classList.add("answer-wrong");
+        button.style.setProperty("border-color", "#dc2626", "important");
         answerCaptcha("wrong");
       }
     };

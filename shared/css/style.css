@@ -113,6 +113,10 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #f59e0b; out
 .gather-content .choice { background:#fff; color:#1e293b; }.gather-content .choice:hover { background:#f8fafc; }.dark .gather-content .choice { background:#1e293b; color:#f8fafc; }.dark .gather-content .choice:hover { background:#334155; }
 .gather-content .choice.answer-correct { border-color:#16a34a; }
 .gather-content .choice.answer-wrong { border-color:#dc2626; }
+.week2-quest .answer-correct { border-color:#16a34a !important; }
+.week2-quest .answer-wrong { border-color:#dc2626 !important; }
+#app .week2-quest .week2-journey button.answer-correct { border-color:#16a34a !important; }
+#app .week2-quest .week2-journey button.answer-wrong { border-color:#dc2626 !important; }
 @media (prefers-color-scheme:dark) {
   .gather-content .card:not(.ceremony-card) { background:rgba(15,23,42,.96); color:#f8fafc; }
   .gather-content .choice { background:#1e293b; color:#f8fafc; border-color:#475569; }
@@ -139,6 +143,12 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #f59e0b; out
 @media (max-width: 800px) { .gather-layout { grid-template-columns:1fr; }.gather-world { min-height:auto; }.pixel-room { min-height:260px; }.gather-world .pixel-room { transform:none; } }
 .data-quality-options { min-width:0; }
 @media (prefers-color-scheme:dark) {
+  .week2-quest { background:rgba(15,23,42,.96); color:#f8fafc; border-color:#334155; }
+  .week2-quest .week2-journey { background:#082f49; border-color:#0e7490; }
+  .week2-quest .week2-journey [class*="text-"] { color:#cffafe; }
+  .week2-quest .week2-journey [class*="border-"] { border-color:#0e7490; }
+  .week2-quest .week2-journey button.answer-correct { border-color:#16a34a !important; }
+  .week2-quest .week2-journey button.answer-wrong { border-color:#dc2626 !important; }
   .cloud-quest { color:#e2e8f0; background:linear-gradient(145deg,rgba(15,23,42,.96),rgba(14,38,58,.96)); border-color:#155e75; }
   .cloud-quest .quest-title { color:#ecfeff; }
   .cloud-quest .quest-top { color:#67e8f9; }
