@@ -132,19 +132,6 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #f59e0b; out
 .data-quality-options { min-width:0; }
 @media (max-width:640px) {
   main { width:100%; }
-  .cloud-quest { padding:1rem; }
-  .cloud-quest .quest-title { font-size:clamp(1.8rem,10vw,2.5rem); }
-  .cloud-quest .quest-kicker { display:block; margin:0 0 .45rem; }
-  .cloud-quest .quest-track { margin-left:-.25rem; margin-right:-.25rem; padding-left:.25rem; }
-  .cloud-quest .quest-hero,.cloud-quest .chapter-heading,.cloud-quest .final-banner { gap:.75rem; }
-  .cloud-quest .quest-hero h2,.cloud-quest .chapter-heading h2,.cloud-quest .final-banner h2 { font-size:clamp(1.45rem,7vw,2rem); }
-  .cloud-quest .business-grid,.cloud-quest .option-grid,.cloud-quest .service-grid { grid-template-columns:1fr; }
-  .cloud-quest .business-choice,.cloud-quest .cloud-option,.cloud-quest .service-card { min-width:0; width:100%; }
-  .cloud-quest .service-card { grid-template-columns:auto minmax(0,1fr); }
-  .cloud-quest .service-card>strong { grid-column:2; grid-row:1; justify-self:end; max-width:7rem; text-align:right; white-space:normal; }
-  .cloud-quest .service-card i { grid-column:2; }
-  .cloud-quest .build-dock { padding:.85rem; }
-  .cloud-quest .build-dock b { font-size:1.35rem; overflow-wrap:anywhere; }
   .data-quality-scene { padding:1rem; }
   .data-quality-scene .scene-icon { font-size:clamp(2.75rem,16vw,4.5rem); line-height:1.1; overflow-wrap:anywhere; }
   .data-quality-options { grid-template-columns:1fr; }
