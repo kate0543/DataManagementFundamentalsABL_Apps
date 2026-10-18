@@ -130,6 +130,28 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #f59e0b; out
 @keyframes avatar-bob { 50% { transform:translateY(-4px); } }
 @media (max-width: 800px) { .gather-layout { grid-template-columns:1fr; }.gather-world { min-height:auto; }.pixel-room { min-height:260px; }.gather-world .pixel-room { transform:none; } }
 .data-quality-options { min-width:0; }
+@media (prefers-color-scheme:dark) {
+  .cloud-quest { color:#e2e8f0; background:linear-gradient(145deg,rgba(15,23,42,.96),rgba(14,38,58,.96)); border-color:#155e75; }
+  .cloud-quest .quest-title { color:#ecfeff; }
+  .cloud-quest .quest-top { color:#67e8f9; }
+  .cloud-quest .quest-track span { color:#94a3b8; border-color:#475569; }
+  .cloud-quest .quest-track span.active { color:#67e8f9; border-color:#06b6d4; }
+  .cloud-quest .quest-hero h2,.cloud-quest .chapter-heading h2,.cloud-quest .final-banner h2 { color:#f8fafc; }
+  .cloud-quest .quest-hero p,.cloud-quest .chapter-heading p,.cloud-quest .final-banner p { color:#cbd5e1; }
+  .cloud-quest .business-choice,.cloud-quest .cloud-option,.cloud-quest .service-card { border-color:#334155; background:#1e293b; color:#f8fafc; }
+  .cloud-quest .business-choice small,.cloud-quest .service-card small { color:#cbd5e1; }
+  .cloud-quest .business-choice em,.cloud-quest .service-card>strong { color:#67e8f9; }
+  .cloud-quest .business-choice:hover,.cloud-quest .cloud-option:hover,.cloud-quest .service-card:hover { border-color:#22d3ee; background:#263548; }
+  .cloud-quest .clue-board { background:#211b3d; border-color:#6d5bb3; }
+  .cloud-quest .clue-card { border-color:#8b7ac7; background:#1e293b; color:#f8fafc; }
+  .cloud-quest .clue-card.found { background:#312e81; }
+  .cloud-quest .clue-card small,.cloud-quest .board-label { color:#c4b5fd; }
+  .cloud-quest .deduction-panel { background:#082f49; }
+  .cloud-quest .feedback { background:#164e63; color:#e0f2fe; }
+  .cloud-quest .locked-panel { background:#1e293b; color:#f8fafc; }
+  .cloud-quest .locked-panel span { color:#cbd5e1; }
+  .cloud-quest .service-card.selected { background:#083344; border-color:#22d3ee; }
+}
 @media (max-width:640px) {
   main { width:100%; }
   .cloud-quest { padding:1rem; }
