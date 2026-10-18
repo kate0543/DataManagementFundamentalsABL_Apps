@@ -258,8 +258,8 @@ function render() {
         <div class="sky-player">🧑‍🔬<small>DATA CLEANER</small></div>
         <div class="sky-rain">✦ ❓ ✦ ❌ ✦ 👥 ✦ ✅ ✦</div>
       </div>
-      <article class="mt-5 rounded-3xl border-2 border-emerald-300 bg-emerald-50 p-6 text-center dark:border-emerald-900 dark:bg-emerald-950/20">
-        <div class="text-7xl" aria-label="Silly data scene">${level.icon}</div>
+      <article class="data-quality-scene mt-5 rounded-3xl border-2 border-emerald-300 bg-emerald-50 p-6 text-center dark:border-emerald-900 dark:bg-emerald-950/20">
+        <div class="scene-icon text-7xl" aria-label="Silly data scene">${level.icon}</div>
         <h2 class="mt-3 text-2xl font-black">${level.title}</h2>
         <p class="mx-auto mt-2 max-w-xl text-lg">${level.story}</p>
         <p class="mx-auto mt-3 max-w-xl rounded-xl bg-white/70 p-3 text-sm font-bold dark:bg-slate-900/50">🔎 Clue: ${level.clue}</p>
@@ -267,7 +267,7 @@ function render() {
       </article>
       <h3 class="mt-6 text-xl font-black">${realChoice ? realChoice.question : "What kind of data problem is this?"}</h3>
       <p class="mt-1 text-sm">${realChoice ? "Choose the best data-cleaning decision." : "Catch the right label before it splashes into the dataset!"}</p>
-      <div class="mt-3 grid gap-3 sm:grid-cols-3">${choices.map((choice, index) => `<button class="data-bubble rounded-2xl border-2 border-sky-200 bg-sky-50 p-4 text-left text-lg transition hover:-translate-y-1 hover:border-emerald-500 dark:border-sky-900 dark:bg-slate-800" data-bubble="${index}">${choice}</button>`).join("")}</div>
+      <div class="data-quality-options mt-3 grid gap-3 sm:grid-cols-3">${choices.map((choice, index) => `<button class="data-bubble rounded-2xl border-2 border-sky-200 bg-sky-50 p-4 text-left text-lg transition hover:-translate-y-1 hover:border-emerald-500 dark:border-sky-900 dark:bg-slate-800" data-bubble="${index}">${choice}</button>`).join("")}</div>
       <div id="reaction" class="mt-5 min-h-20 rounded-2xl bg-slate-100 p-4 text-center dark:bg-slate-800"><span class="text-4xl">🐟</span><p class="mt-1 text-sm font-bold">${realChoice ? "Read the record and choose the best correction." : "Read the scene and choose a data-quality label!"}</p></div>
     </section>`;
   document.querySelectorAll("[data-bubble]").forEach((button) => {
