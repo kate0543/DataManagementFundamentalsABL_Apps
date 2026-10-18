@@ -111,6 +111,14 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #f59e0b; out
 .gather-content { min-width:0; }.location-pill { display:inline-flex; gap:.5rem; border:1px solid #66569b; border-radius:999px; padding:.4rem .75rem; background:#241e45; color:#ddd6fe; font-size:.8rem; font-weight:900; }
 .gather-content .card { border:3px solid #e9d5ff; }.gather-content .glass { background:rgba(255,255,255,.94); }
 .gather-content .choice { background:#fff; color:#1e293b; }.gather-content .choice:hover { background:#f8fafc; }.dark .gather-content .choice { background:#1e293b; color:#f8fafc; }.dark .gather-content .choice:hover { background:#334155; }
+.gather-content .choice.answer-correct { border-color:#16a34a; }
+.gather-content .choice.answer-wrong { border-color:#dc2626; }
+@media (prefers-color-scheme:dark) {
+  .gather-content .card:not(.ceremony-card) { background:rgba(15,23,42,.96); color:#f8fafc; }
+  .gather-content .choice { background:#1e293b; color:#f8fafc; border-color:#475569; }
+  .gather-content .choice:hover { background:#334155; }
+  .gather-content .choice>span { background:#334155; color:#f8fafc; }
+}
 .ceremony-card { position:relative; overflow:hidden; min-height:600px; border:3px solid #7c3aed; border-radius:1.25rem; padding:clamp(2rem,7vw,5rem) 2rem; background:radial-gradient(circle at 50% 15%,#5b3a9c 0,#2b1d52 35%,#17132b 75%); color:#f8fafc; text-align:center; box-shadow:0 20px 70px rgba(0,0,0,.35); }
 .ceremony-card::before,.ceremony-card::after { content:""; position:absolute; width:180px; height:180px; border:1px solid rgba(216,180,254,.3); border-radius:50%; }.ceremony-card::before { left:-80px; top:30%; }.ceremony-card::after { right:-80px; bottom:10%; }
 .ceremony-stars { color:#fef08a; font-size:1.2rem; letter-spacing:.8rem; }.hat-orb { display:flex; align-items:center; justify-content:center; width:120px; height:120px; margin:2rem auto 1.5rem; border:4px solid #fef08a; border-radius:50%; background:rgba(124,58,237,.35); font-size:4.5rem; box-shadow:0 0 0 10px rgba(254,240,138,.1),0 0 45px rgba(216,180,254,.5); animation: hat-float 2.5s ease-in-out infinite; }
